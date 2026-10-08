@@ -83,7 +83,7 @@ function Placeholder({ hint, ratio, tone }: { hint: string; ratio: Ratio; tone: 
         className={`absolute left-1/2 top-1/2 h-px w-6 -translate-x-1/2 -translate-y-1/2 border-t ${line}`}
       />
       <div className="absolute inset-x-6 bottom-6 flex items-end justify-between gap-4 sm:inset-x-8 sm:bottom-8">
-        <p className="eyebrow max-w-[28ch] text-[0.65rem] leading-relaxed">
+        <p className="eyebrow max-w-[44ch] text-[0.65rem] leading-relaxed">
           <span className="text-accent-soft">●</span> Placeholder — {hint}
         </p>
         <p aria-hidden className="eyebrow hidden text-[0.65rem] sm:block">

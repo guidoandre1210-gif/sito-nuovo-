@@ -226,7 +226,7 @@ export const portfolio = {
       id: "25-aprile-milano",
       title: "25 aprile a Milano",
       category: "Reportage · Evento",
-      year: "—",
+      year: "", // anno da verificare
       description: "Il corteo per la Festa della Liberazione nelle strade di Milano.",
       ratio: "4/5",
       image: null,
@@ -247,7 +247,7 @@ export const portfolio = {
       id: "pattern",
       title: "Pattern",
       category: "Fotografia · Serie",
-      year: "—",
+      year: "", // anno da verificare
       // Descrizione da completare con le parole di Andrea.
       description: "Serie fotografica pubblicata nella sezione Articoli del sito.",
       ratio: "3/2",
