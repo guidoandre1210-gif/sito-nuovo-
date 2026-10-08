@@ -33,7 +33,7 @@ export function Portfolio() {
             <Reveal
               as="li"
               key={project.id}
-              className={`${i === 0 ? "md:col-span-2" : ""} ${layout[i]?.wrap ?? "lg:col-span-6"}`}
+              className={`${i === 0 || i === 3 ? "md:col-span-2" : ""} ${layout[i]?.wrap ?? "lg:col-span-6"}`}
             >
               <ProjectCard project={project} sizes={layout[i]?.sizes ?? "100vw"} />
             </Reveal>

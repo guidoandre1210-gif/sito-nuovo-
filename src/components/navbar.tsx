@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, m } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { nav, site } from "@/content/site";
 
@@ -130,7 +130,7 @@ export function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id="menu-mobile"
             ref={panelRef}
             role="dialog"
@@ -144,7 +144,7 @@ export function Navbar() {
           >
             <ul className="flex flex-col gap-2">
               {nav.links.map((link, i) => (
-                <motion.li
+                <m.li
                   key={link.href}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export function Navbar() {
                   >
                     {link.label}
                   </a>
-                </motion.li>
+                </m.li>
               ))}
             </ul>
             <a
@@ -167,7 +167,7 @@ export function Navbar() {
             >
               {nav.cta.label}
             </a>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

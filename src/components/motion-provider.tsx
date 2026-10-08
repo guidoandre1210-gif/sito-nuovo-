@@ -1,8 +1,15 @@
 "use client";
 
-import { MotionConfig } from "motion/react";
+import { domAnimation, LazyMotion, MotionConfig } from "motion/react";
 
-/** Rispetta automaticamente prefers-reduced-motion per tutte le animazioni Motion. */
+/**
+ * - LazyMotion + domAnimation: carica solo le funzionalità di animazione usate (bundle più leggero).
+ * - reducedMotion="user": rispetta automaticamente prefers-reduced-motion.
+ */
 export function MotionProvider({ children }: { children: React.ReactNode }) {
-  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+  return (
+    <LazyMotion features={domAnimation} strict>
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
+    </LazyMotion>
+  );
 }
